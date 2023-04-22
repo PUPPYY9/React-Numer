@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Button, Container, Form, Table } from "react-bootstrap";
 import { evaluate } from 'mathjs'
-import axios from "axios";
+//import axios from "axios";
 
 const Sample =()=>{
     const print = () =>{
@@ -103,13 +103,13 @@ const Sample =()=>{
     const [XR,setXR] = useState(0)
 
 
-    useEffect(()=>{
-        axios.get("http://localhost:5000/bisection").then(res=>{
-        console.log(res.data[0].XL)
-        setXL(res.data[0].XL)
-        setXR(res.data[0].XR)
-        })
-    },[])
+    // useEffect(()=>{
+    //     axios.get("http://localhost:5000/bisection").then(res=>{
+    //     console.log(res.data[0].XL)
+    //     setXL(res.data[0].XL)
+    //     setXR(res.data[0].XR)
+    //     })
+    // },[])
  
     const inputEquation = (event) =>{
         console.log(event.target.value)
